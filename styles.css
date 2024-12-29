@@ -22,12 +22,13 @@ h2, h3, h4, p {
 body {
     margin: 0;
     padding: 0;
+    background-color: #f0abfc;
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr minmax(150px, 1fr);
+    grid-template-rows: 200px 3fr 1fr 30px;
 }
 
 .dashboard {
@@ -36,10 +37,13 @@ body {
     color: #faf5ff;
 }
 
-#dashboard-img {
-    height: 50px;
+#dash-list-one {
+    margin-top: 60px;
 }
 
+#dash-list-two {
+    margin-top: 60px;
+}
 .dashboard ul {
     display: flex;
     flex-direction: column;
@@ -47,6 +51,7 @@ body {
     align-items: flex-start;
     gap: 20px;
     cursor: pointer;
+    font-weight:500;
 }
 .dashboard ul li {
     list-style: none;
@@ -56,7 +61,14 @@ body {
     gap: 20px;
 }
 
-.dashboard-icon {
+#dashboard-top {
+    display: flex;
+    padding-top: 20px;
+    padding-left: 20px;
+    gap: 20px;
+}
+
+.dashboard-icon, #dashboard-img {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(215deg) brightness(105%) contrast(109%);
 }
 
@@ -64,6 +76,8 @@ body {
     grid-column: 2 / 4;
     display: grid;
     background-color: #f5d0fe;
+    box-shadow: 0px 0px 5px 0px black;
+    padding-bottom: 0;
 }
 
 .search {
@@ -73,6 +87,16 @@ body {
 
 .profile {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.profile h2 {
+    font-size: 1rem;
+}
+.profile img {
+    height: 80px;
 }
 
 .profile-bar {
@@ -84,11 +108,12 @@ body {
     width: 400px;
     border-radius: 20px;
     padding: 0;
+    height: 20px;
+    border: none;
 }
 
 #search-bar {
     display: flex;
-    justify-content: center;
     align-items: center;
     padding-left: 70px;
 }
@@ -112,6 +137,9 @@ body {
     width: 70px;
     height: 30px;
     border-radius: 20px;
+    background-color: #4a044e;
+    color: white;
+    border: none;
 }
 
 .dashboard ul img {
@@ -121,24 +149,25 @@ body {
 .projects {
     grid-area: 2 / 2 / 4 / 3;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    padding: 20px;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 20px repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
 }
 
 .projects h2 {
-    grid-column: 1 / 4;
+    grid-column: 1 / 3;
     margin-bottom: -100px;
 }
 
 .card { 
-    height: 200px;
+    height: 300px;
     background-color: #e879f9;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     padding: 20px;
-    gap: 50px;
+    gap: 180px;
     border-left: 10px solid black;
 }
 
@@ -159,10 +188,8 @@ body {
 }
 
 .trending {
-    grid-area: 3 / 3 / 3 / 3;
     display: flex;
     flex-direction: column;
-    margin-top: -190px;
     border-radius: 20px;
     padding: 20px;
 }
@@ -170,8 +197,8 @@ body {
     padding: 20px;
 }
 .text-ann {
+    margin-top: 50px;
     height: 200px;
-    background-color: #86198f;
     border-radius: 20px;
     padding: 20px;
 }
@@ -184,23 +211,23 @@ body {
 }
 
 .people img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 
 .people {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px 30px 10px 30px;
+    padding: 10px 20px 10px 20px;
 }
 
 .text-tre {
     padding: 20px;
-    background-color: #86198f;
     border-radius: 20px;
 }
 
 .card, .text-ann, .text-tre {
-    box-shadow: 2px 2px 2px 2px black;
+    box-shadow: 1px 1px 1px 1px black;
+    background-color: white;
 }
